@@ -1,9 +1,11 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
+import TiltData from '../Component/TiltData';
 
 const Weather = ({ city }) => {
     const key = '9c9f6c8a1735159813e9ff8bb9618099';
     const [data, setData] = useState(null)
+    const [show, setShow] = useState(false);
 
     const getData = async () => {
         try {
@@ -11,6 +13,7 @@ const Weather = ({ city }) => {
             if (response?.data) {
                 console.log(response.data)
                 setData(response.data)
+                setShow(true)
             }
 
 
@@ -22,7 +25,19 @@ const Weather = ({ city }) => {
         getData()
     }, [city])
     return (
-        <div>{data?.name}</div>
+        <>
+            {
+                show ? (
+
+                    <div className='row mt-4'>
+                        <div className="col-md-6">
+                            <TiltData data={data?.name} />
+
+                        </div>
+                    </div>
+                ) : null
+            }
+        </>
     )
 }
 
