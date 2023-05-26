@@ -2,21 +2,24 @@ import React from "react";
 import Tilt from "react-parallax-tilt";
 import bg from "../Assets/weather.jpg"
 
-const TiltData = ({ data }) => {
+const TiltData = ({ data, img }) => {
     return (
         <Tilt>
             <div
                 style={{
-                    height: "200px",
+                    height: "",
                     borderRadius: "5px",
                     border: "",
                     backgroundImage: `url(${bg})`,
                     color: "white",
-                    boxShadow: "2px 2px 2px 1px rgba(0, 0, 0, 0.2)"
+                    boxShadow: "5px 5px 10px black"
                 }}
 
             >
-                <h1> {data}</h1>
+                <div className="tilt">
+                    <span className="center glow"> {data}</span>
+                    <img height={"80px"} src={img} />
+                </div>
             </div>
         </Tilt>
     );

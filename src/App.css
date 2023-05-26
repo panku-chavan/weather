@@ -8,3 +8,25 @@
   font-weight: bold !important;
   border-color: black !important;
 }
+.center{
+  margin: auto;
+  font-size:xx-large;
+  font-family:cursive;
+  font-weight: bold;
+  width: 50%;
+  padding: 5px;
+}
+.tilt{
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.glow {
+  font-size: 50px;
+  color:rgb(188, 201, 238);
+  text-align: center;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+

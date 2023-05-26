@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import TiltData from '../Component/TiltData';
+import temp from "../Assets/temp.png";
 
 const Weather = ({ city }) => {
     const key = '9c9f6c8a1735159813e9ff8bb9618099';
@@ -29,10 +30,13 @@ const Weather = ({ city }) => {
             {
                 show ? (
 
-                    <div className='row mt-4'>
-                        <div className="col-md-6">
+                    <div className='row mt-4 '>
+                        <div className="col-md-3 mb-4">
                             <TiltData data={data?.name} />
 
+                        </div>
+                        <div className="col-md-4 mb-4">
+                            <TiltData data={data?.main?.temp} img={temp} />
                         </div>
                     </div>
                 ) : null
