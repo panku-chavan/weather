@@ -12,10 +12,10 @@ const InputCity = () => {
     }
     return (
         <Layout>
-            <div className="container-sm">
+            <div className="container-sm mt-5">
                 <form className="" onSubmit={handleSubmit}>
                     <div className="row">
-                        <div className="col-md-11">
+                        <div className="col-md-11 mb-3">
                             <input
                                 className="form-control transparent-input"
                                 type="text"
@@ -25,7 +25,7 @@ const InputCity = () => {
                             />
                         </div>
                         <div className="col-md-1">
-                            <input type="submit" className="btn btn-primary" value={"Submit"} />
+                            <input type="submit" className="btn btn-primary " value={"Submit"} />
 
                         </div>
                     </div>

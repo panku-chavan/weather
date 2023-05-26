@@ -36,10 +36,14 @@ const Weather = ({ city }) => {
 
                         </div>
                         <div className="col-md-4 mb-4">
-                            <TiltData data={data?.main?.temp} img={temp} />
+                            <TiltData data={`${data?.main?.temp}°C`} img={temp} />
                         </div>
                     </div>
-                ) : null
+                ) : (
+                    <div>
+                        <h1 className='center glow'>Please Enter City Name</h1>
+                    </div>
+                )
             }
         </>
     )
